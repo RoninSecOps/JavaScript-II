@@ -4,9 +4,16 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
-
+function someFnc() {
+  const name = 'Bob';
+  console.log(`Hello ${name} from someFnc`);
+  function secondFnc() {
+    console.log(`Hello ${name} from secondFnc`);
+  }
+  secondFnc();
+}
+someFnc();
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
