@@ -491,9 +491,24 @@ console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
-
+const fruits = ['Apple', 'Orange', 'Plum', 'Kiwi', 'Cheery', 'Banana'];
 // Problem 1
-
+const fruitsLower = fruits.map(function(fruits) {
+  return fruits.toLocaleLowerCase();
+});
+console.log(fruitsLower);
 // Problem 2
-
+const newArr = [];
+const howManyLetters = fruits.forEach(function(fruit) {
+  newArr.push(fruit.length);
+});
+console.log(newArr);
 // Problem 3
+const filterFruits = fruits.filter(function(fruit) {
+  if (fruit.length < 5) {
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log(filterFruits);
